@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
     public titleVar = '@input property as variable';
     title = 'app';
+
+    onClicked(event) {
+        console.log(event);
+    }
 }
