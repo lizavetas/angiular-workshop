@@ -1,0 +1,9 @@
+.list-group-item {
+    cursor: pointer;
+}
+
+.list-group-item img {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+}
