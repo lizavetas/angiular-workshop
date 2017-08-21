@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
     selector: 'app-product-description-box',
@@ -7,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 
 export class ProductDescriptionBoxComponent implements OnInit {
+    @Input() title: string;
     public isHidden = true;
     // private isHidden = true => ng serve funktioniert(da compiliert im Browser), build nicht
     // keine private in tpl!!!!
@@ -17,7 +18,6 @@ export class ProductDescriptionBoxComponent implements OnInit {
         this.isHidden = !this.isHidden;
     }
     public toggle(event: MouseEvent): void {
-
         if (event.shiftKey) {
             this.isHidden = !this.isHidden;
         } else {
