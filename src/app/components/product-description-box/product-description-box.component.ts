@@ -8,10 +8,21 @@ import {Component, OnInit} from '@angular/core';
 
 export class ProductDescriptionBoxComponent implements OnInit {
     public isHidden = true;
+    // private isHidden = true => ng serve funktioniert(da compiliert im Browser), build nicht
+    // keine private in tpl!!!!
     constructor() {
     }
-    clickBtn() {
+    // public und void sind optional
+    public clickBtn(): void {
         this.isHidden = !this.isHidden;
+    }
+    public toggle(event: MouseEvent): void {
+
+        if (event.shiftKey) {
+            this.isHidden = !this.isHidden;
+        } else {
+            alert('bla');
+        }
     }
     ngOnInit() {
     }
