@@ -6,6 +6,11 @@ import { ProductListComponent } from './components/product-list/product-list.com
 // Define routes
 export const appRoutes: Routes = [
     {
+        path: '',
+        redirectTo: '/products',
+        pathMatch: 'full' // checks if full url matches path
+    },
+    {
         path: 'products',
         component: ProductListComponent
     }
