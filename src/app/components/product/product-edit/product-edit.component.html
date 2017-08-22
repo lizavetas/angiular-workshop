@@ -1,5 +1,8 @@
-<div>
-    <form #form="ngForm">
-        <input type="text" [(ngModel)]="product.title" name="title" #title="ngModel">
+<div *ngIf="product">
+    <form #form="ngForm" (ngSubmit)="save(form.value)">
+        <input type="text" required [(ngModel)]="product.id" name="title" #title="ngModel" > <br />
+        <input type="text" required [(ngModel)]="product.price" name="price" #title="ngModel"> <br />
+        <input type="text"  [(ngModel)]="product.description" name="description" #title="ngModel">
+        <button type="submit">save</button>
     </form>
 </div>

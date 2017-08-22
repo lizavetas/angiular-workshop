@@ -15,6 +15,8 @@ import { routing } from './app.routing';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
 
+import './app.component.css';
+
 @NgModule({
     declarations: [
         AppComponent,
