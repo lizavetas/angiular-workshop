@@ -11,13 +11,15 @@ import { ProductDataService } from './shared/product-data.service';
 import { HttpClientModule } from '@angular/common/http';
 
 import { routing } from './app.routing';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         ProductDescriptionBoxComponent,
         ProductTitleComponent,
-        ProductListComponent
+        ProductListComponent,
+        ProductDetailComponent
     ],
     imports: [
         BrowserModule,
