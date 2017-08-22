@@ -14,14 +14,14 @@ import { ProductDataService } from '../../shared/product-data.service';
 export class ProductDetailComponent implements OnInit {
 
 
-    public product: Product[];
+    public product: Product;
 
     constructor(private route: ActivatedRoute, private productDataService: ProductDataService) {
     }
 
     ngOnInit() {
         this.route.params.subscribe((params) => {
-            this.productDataService.getProduct(params.id).subscribe((product: Product[]) => {
+            this.productDataService.getProduct(params.id).subscribe((product: Product) => {
                 this.product = product;
             });
         });

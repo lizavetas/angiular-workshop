@@ -9,9 +9,11 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductDataService } from './shared/product-data.service';
 
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { routing } from './app.routing';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
 
 @NgModule({
     declarations: [
@@ -19,11 +21,13 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
         ProductDescriptionBoxComponent,
         ProductTitleComponent,
         ProductListComponent,
-        ProductDetailComponent
+        ProductDetailComponent,
+        ProductEditComponent
     ],
     imports: [
         BrowserModule,
         HttpClientModule,
+        FormsModule,
         routing
     ],
     providers: [
