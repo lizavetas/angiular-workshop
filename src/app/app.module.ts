@@ -8,9 +8,9 @@ import { ProductListComponent } from './components/product-list/product-list.com
 
 import { ProductDataService } from './shared/product-data.service';
 
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
-
+import { routing } from './app.routing';
 
 @NgModule({
     declarations: [
@@ -21,7 +21,8 @@ import {HttpClientModule} from '@angular/common/http';
     ],
     imports: [
         BrowserModule,
-        HttpClientModule
+        HttpClientModule,
+        routing
     ],
     providers: [
         ProductDataService
