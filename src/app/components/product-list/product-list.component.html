@@ -1,7 +1,7 @@
 <ul *ngFor="let product of products" class="list-group">
   <li class="list-group-item">
       <h3><a [routerLink]="['/products', product.id]">{{product.title}}</a></h3>
-      <p>{{product.description}}</p>
-      <img src={{product.image}} width="200"/>
+      <!--<p>{{product.description}}</p>-->
+      <!--<img src={{product.image}} width="200"/>-->
   </li>
 </ul>
