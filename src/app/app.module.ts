@@ -7,6 +7,7 @@ import { ProductTitleComponent } from './components/product-title/product-title.
 import { ProductListComponent } from './components/product-list/product-list.component';
 
 import { ProductDataService } from './shared/product-data.service';
+import { ConfirmCandeactivateGuard } from './shared/confirm-candeactivate.guard';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -38,7 +39,8 @@ import { ReactiveFormsModule } from '@angular/forms';
         ReactiveFormsModule
     ],
     providers: [
-        ProductDataService
+        ProductDataService,
+        ConfirmCandeactivateGuard
     ],
     bootstrap: [AppComponent]
 })

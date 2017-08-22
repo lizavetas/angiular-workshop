@@ -6,6 +6,8 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
 import { ProductNewComponent } from './components/product/product-new/product-new.component';
 
+import { ConfirmCandeactivateGuard } from './shared/confirm-candeactivate.guard';
+
 // Define routes
 export const appRoutes: Routes = [
     {
@@ -19,7 +21,9 @@ export const appRoutes: Routes = [
     },
     {
         path: 'products/:id/edit',
-        component: ProductEditComponent
+        component: ProductEditComponent,
+        canActivate: [ConfirmCandeactivateGuard]
+
     },
     {
         path: 'products/new',
