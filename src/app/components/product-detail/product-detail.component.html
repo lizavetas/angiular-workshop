@@ -1,5 +1,5 @@
-<div>
-  product-detail works!
-  <!--<p>{{product.description}}</p>-->
-  <!--<img src={{product.image}} width="200"/>-->
+<div *ngIf="product">
+    <a [routerLink]="['/products']">Zurück</a>
+    <p>{{product.description}}</p>
+    <img src={{product.image}} width="200"/>
 </div>
