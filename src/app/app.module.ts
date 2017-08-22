@@ -16,6 +16,9 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
 
 import './app.component.css';
+import { ProductNewComponent } from './components/product/product-new/product-new.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
     declarations: [
@@ -24,13 +27,15 @@ import './app.component.css';
         ProductTitleComponent,
         ProductListComponent,
         ProductDetailComponent,
-        ProductEditComponent
+        ProductEditComponent,
+        ProductNewComponent
     ],
     imports: [
         BrowserModule,
         HttpClientModule,
         FormsModule,
-        routing
+        routing,
+        ReactiveFormsModule
     ],
     providers: [
         ProductDataService

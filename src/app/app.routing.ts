@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
+import { ProductNewComponent } from './components/product/product-new/product-new.component';
 
 // Define routes
 export const appRoutes: Routes = [
@@ -19,6 +20,10 @@ export const appRoutes: Routes = [
     {
         path: 'products/:id/edit',
         component: ProductEditComponent
+    },
+    {
+        path: 'products/new',
+        component: ProductNewComponent
     },
     {
         path: 'products/:id',

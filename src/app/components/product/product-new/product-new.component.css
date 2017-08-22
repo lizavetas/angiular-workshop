@@ -1,0 +1,8 @@
+
+input.ng-invalid:not(.ng-pristine) {
+    border: red solid 1px;
+}
+
+input {
+    display: block;
+}
