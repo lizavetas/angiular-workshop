@@ -6,6 +6,8 @@ import { Product } from '../../../shared/product';
 
 import { ProductDataService } from '../../../shared/product-data.service';
 
+import {Router} from '@angular/router';
+
 @Component({
   selector: 'app-product-edit',
   templateUrl: './product-edit.component.html',
@@ -15,13 +17,15 @@ export class ProductEditComponent implements OnInit {
 
     public product: Product;
 
-    constructor(private route: ActivatedRoute, private productDataService: ProductDataService) {
+    constructor(private route: ActivatedRoute, private productDataService: ProductDataService, private router: Router) {
     }
 
     save(value) {
         if (value.id === '' || value.price === '') {
             console.log('fehler', value);
         }
+
+        this.router.navigate(['/products']);
     }
 
     ngOnInit() {
